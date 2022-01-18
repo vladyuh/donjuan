@@ -41,4 +41,10 @@
   height: 100%;
   width: 100%;
 }
+
+@media screen and (min-width: 576px) {
+  .home__img::after {
+    display: none;
+  }
+}
 /*# sourceMappingURL=maps/index.css.map */

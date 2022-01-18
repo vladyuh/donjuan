@@ -27,6 +27,10 @@
       content: "";
       background: linear-gradient(180.1deg, #000000 0.08%, rgba(0, 0, 0, 0) 98.75%);
       z-index: 4;
+
+      @media screen and (min-width: 576px) {
+        display: none;
+      }
     }
 
     img {
