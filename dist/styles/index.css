@@ -5,8 +5,12 @@
 /* media breakpoints */
 
 .home {
+  position: static;
   margin-top: -121px;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__img {

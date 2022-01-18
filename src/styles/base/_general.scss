@@ -68,12 +68,29 @@ main {
     width: 100%;
     padding-top: 121px;
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
+
+    .page-sidebar {
+        display: none;
+
+        @media screen and (min-width: 1367px) {
+            display: block;
+            width: 100%;
+            max-width: 467px;
+        }
+    }
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
 }
 
 .container {
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
+    max-width: 1245px;
 }

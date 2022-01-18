@@ -454,21 +454,32 @@ main {
   width: 100%;
   padding-top: 121px;
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
+}
+
+main .page-sidebar {
+  display: none;
+}
+
+main .page-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
   padding: 0 20px;
+  max-width: 1245px;
 }
 
 .btn {
   display: flex;
   align-items: center;
-  padding: 15px 25px;
-  background: #448aff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  background: #E32D2D;
   color: #fff;
   font-weight: 600;
   border: none;
@@ -635,6 +646,10 @@ header {
   transition: top 500ms ease-in-out;
 }
 
+header .container {
+  max-width: 1745px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -663,6 +678,31 @@ header {
   right: 0;
   bottom: 0;
   width: 100%;
+}
+
+.header-buy {
+  display: none;
+}
+
+.header-buy__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 34px;
+}
+
+@media screen and (min-width: 1025px) {
+  .header-buy {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  main .page-sidebar {
+    display: block;
+    width: 100%;
+    max-width: 467px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
