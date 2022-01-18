@@ -1,0 +1,44 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+.home {
+  margin-top: -121px;
+  flex-grow: 1;
+}
+
+.home__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.home__img::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(180.1deg, #000000 0.08%, rgba(0, 0, 0, 0) 98.75%);
+  z-index: 4;
+}
+
+.home__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=maps/index.css.map */

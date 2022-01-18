@@ -1,0 +1,79 @@
+.perf-no-animation * {
+    transition: none !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+html {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+    letter-spacing: normal;
+    scroll-behavior: smooth;
+    background: #131416;
+}
+
+button:active,
+button:hover,
+input:active,
+input:focus,
+input:hover {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: 130%;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    padding-top: 121px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}

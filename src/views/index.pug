@@ -1,0 +1,22 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/headers/headers.pug
+
+
+block variables
+	- const title = "Главная"
+block styles
+	link(rel="stylesheet", href="styles/index.css")
+block critical
+block content
+	section.home
+		.container
+			.home__img
+				picture
+					source(srcset="./img/home/background-responsive.jpg" type="image/jpeg" media="(min-width: 1024px)")
+					source(srcset="./img/home/background-responsive-1024.jpg" type="image/jpeg" media="(min-width: 768px)")
+					source(srcset="./img/home/background-responsive-768.jpg" type="image/jpeg" media="(min-width: 480px)")
+					source(srcset="./img/home/background-responsive-480.jpg" type="image/jpeg" media="(min-width: 425px)")
+					img(src="./img/home/background-375.jpg" loading="lazy" alt="Background")
+block scripts
+	script(src="js/main.js")
