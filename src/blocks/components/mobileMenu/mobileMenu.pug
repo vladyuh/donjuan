@@ -1,6 +1,16 @@
 .mobileMenu
   .container
-    .mobileMenu-nav
+    nav.mobileMenu-nav
       ul.mobileMenu-nav__ul
-        li:  a(href="#breadcrumbs") Breadcrumbs
+        li: a(href="about.html"  title="О спектакле") О спектакле
+        li: a(href="actors.html" title="Актеры") Актеры
+        li: a(href="team.html" title="Творческая команда") Творческая команда
+        li: a(href="parthers.html" title="Партнеры") Партнеры
+        li: a(href="contacts.html" title="Партнеры") Контакты
     .mobileMenu-footer
+      ul.mobileMenu-footer__socials
+        li: a(href="#"): +icons('#vk-19', '20')
+        li: a(href="#"): +icons('#instagram-17', '20') 
+        li: a(href="#"): +icons('#youtube-20', '20')
+      .mobileMenu-footer__copyright
+        p Copyright © 2022 Мюзикл Дон Жуан

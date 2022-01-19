@@ -1,36 +1,102 @@
 .mobileMenu {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     transform: translateX(-100%);
-    width: 300px;
-    background: #eee;
-    transition: transform 0.3s ease;
-    overflow-y: scroll;
-    z-index: 1001;
+    width: 100%;
+    background: #131416;
+    transition: transform 0.5s ease;
+    z-index: 2;
+    padding: 121px 0 77px;
+
     &.opened {
         transform: translateX(0);
     }
-    &-header {
-        &__toggle {
-            display: flex;
-            align-items: center;
-            height: 69px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        @media screen and (min-width: 1367px) {
+            max-height: 727px;
         }
+
     }
+
     &-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+
+        &__ul {
+            margin: auto 0;
+            display: flex;
+            flex-direction: column;
+        }
+
         &__ul li {
             font-size: 18px;
-            line-height: 120%;
-            margin-bottom: 15px;
+            line-height: 22px;
+            margin: 15px 0;
+
+            @media screen and (min-width: 641px) {
+                margin: 25px 0;
+                font-size: 24px;
+                line-height: 29px / 24px * 100%;
+            }
+
+            @media screen and (min-width: 1367px) {
+                font-size: 18px;
+                line-height: 22px;
+                margin: 15px 0;
+            }
         }
+    }
+
+    &-footer {
+        padding-bottom: 56px;
+        margin-top: auto;
+
+        &__socials {
+            display: flex;
+            margin-bottom: 15px;
+
+            li {
+                margin-right: 13px;
+            }
+        }
+
+        &__copyright p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 161%;
+            color: #474747;
+        }
+    }
+
+
+    @media screen and (min-width: 641px) {
+        padding-bottom: 0;
+    }
+
+
+    @media screen and (min-width: 1367px) {
+
+        .container {
+            padding: 0 76px;
+        }
+
     }
 }
 
-@media screen and (max-width: $w1024) {
+@media screen and (min-width: 1367px) {
     .mobileMenu {
-        display: block;
+        background: none;
+        position: absolute;
+        transform: none;
     }
 }

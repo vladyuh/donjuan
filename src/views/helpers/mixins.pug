@@ -1,9 +1,9 @@
-mixin icons(id, size)
+mixin icons(id, size, modify)
   if size
-    svg(width=''+size+'' height=''+size+'')
+    svg(width=''+size+'' height=''+size+'' class=modify)
       use(xlink:href="/img/sprites/sprite.svg"+id)
   else
-    svg(width="24" height="24")
+    svg(width="24" height="24" class=modify)
       use(xlink:href="/img/sprites/sprite.svg"+id)
 
 mixin listUl(list)

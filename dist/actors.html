@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная</title>
+    <title>О спектакле</title>
     <meta name="theme-color" content="#131416">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,7 +26,7 @@
     <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/actors.css">
   </head>
   <body class="perf-no-animation page">
     <header>
@@ -87,24 +87,26 @@
         </div>
       </div>
       <div class="page-content">
-        <section class="home">
+        <section class="actors">
           <div class="container">
-            <div class="home__img">
-              <picture>
-                <source srcset="./img/home/background-responsive.webp" type="image/webp" media="(min-width: 1024px)">
-                <source srcset="./img/home/background-responsive-1024.webp" type="image/webp" media="(min-width: 768px)">
-                <source srcset="./img/home/background-responsive-768.webp" type="image/webp" media="(min-width: 480px)">
-                <source srcset="./img/home/background-responsive-480.webp" type="image/webp" media="(min-width: 425px)">
-                <source srcset="./img/home/background-responsive.jpg" type="image/jpeg" media="(min-width: 1024px)">
-                <source srcset="./img/home/background-responsive-1024.jpg" type="image/jpeg" media="(min-width: 768px)">
-                <source srcset="./img/home/background-responsive-768.jpg" type="image/jpeg" media="(min-width: 480px)">
-                <source srcset="./img/home/background-responsive-480.jpg" type="image/jpeg" media="(min-width: 425px)">
-                <source srcset="./img/home/background-375.webp" type="image/webp"><img src="../img/home/background-375.jpg" loading="lazy" alt="Background">
-              </picture>
-            </div>
-            <div class="home__text">
-              <div class="home__text-desc">Громкая премьера!</div>
-              <h1 class="section-h1">Мюзикл «Дон Жуан»</h1>
+            <h1 class="section-h1">Актеры</h1>
+            <div class="actors-list">
+              <div class="actors-list__item">
+                <div class="image"><img src="/img/actors/1.png" alt="Иван Ожогин"></div>
+                <div class="description">
+                  <div class="description__name section-h4">Иван Ожогин</div>
+                  <div class="description__role">Дон Жуан</div>
+                  <div class="description__text">
+                    <p>Актер, певец, продюсер. Исполнитель главных ролей в мюзиклах «Призрак Оперы» «Бал вампиров» (Санкт-Петербург, Берлин, Москва, Кёльн), «Джекилл и Хайд», «Мастер и Маргарита», «Демон Онегина», «Чикаго», «Кошки», «Свадьба соек», «Норд - Ост», «Красавица и чудовище», «Пола Негри», а также рок-оперы <a href="#" class="more">Подробнее</a></p>
+                  </div>
+                  <ul class="description__socials">
+                    <li><a href="#">
+                              <svg width="21" height="21">
+                                <use xlink:href="/img/sprites/sprite.svg#instagram-17"></use>
+                              </svg></a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>

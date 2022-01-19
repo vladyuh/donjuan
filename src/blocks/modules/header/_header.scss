@@ -6,10 +6,17 @@ header {
     z-index: 3;
     height: 121px;
     width: 100%;
-    transition: top 500ms ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    &.sticky{
+        background: #131416;
+    }
 
     .container {
-        max-width: 1745px;
+        @media screen and (min-width: 1367px) {
+            max-width: 100%;
+            padding: 0 76px;
+        }
     }
 
 }
@@ -20,13 +27,44 @@ header {
     padding: 12px 0;
 
     &-burger {
+        width: 43px;
+        height: 43px;
         display: block;
+
+        &.open {
+            .header-burger__open {
+                display: none;
+            }
+
+            .header-burger__close {
+                display: block;
+            }
+        }
+
+        .header-burger__open {
+            display: block;
+        }
+
+        .header-burger__close {
+            display: none;
+
+        }
+
+        @media screen and (min-width: 641px) {
+            order: -1;
+            margin-right: 10px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
     }
 
     &-logo {
         max-width: 211px;
         width: 100%;
         margin-right: auto;
+        margin-left: -20px;
 
         &__img {
             padding-top: 97px / 211px * 100%;
@@ -41,22 +79,73 @@ header {
                 width: 100%;
             }
         }
+
+        @media screen and (min-width: 641px) {
+            margin-left: 0;
+        }
     }
 
     &-buy {
-        display: none;
+        display: flex;
+        align-items: center;
+        min-height: 60px;
 
         &__desc {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-right: 34px;
+            display: none;
+
+            @media screen and (min-width: 833px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 211px;
+                margin-right: 30px;
+
+                span,
+                a {
+                    font-size: 14px;
+                    line-height: 135%;
+                    text-align: right;
+                    color: #FFFFFF;
+                }
+
+                br {
+                    display: block;
+                }
+
+                a {
+                    font-weight: 600;
+                }
+            }
+
+            @media screen and (min-width: 1025px) {
+                max-width: 305px;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
-        &__btn {}
+        &__btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            border-radius: 0;
+            height: 77px;
+            justify-content: center;
+            font-size: 18px;
+            line-height: 22px / 18px * 100%;
+            letter-spacing: 0.125em;
+            text-transform: uppercase;
 
-        @media screen and (min-width: 1025px) {
-            display: flex;
+            @media screen and (min-width: 641px) {
+                width: 240px;
+                position: static;
+                border-radius: 50px;
+                height: 52px;
+            }
         }
     }
 }

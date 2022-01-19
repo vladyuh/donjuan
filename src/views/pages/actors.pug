@@ -1,0 +1,28 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/headers/headers.pug
+
+
+block variables
+	- const title = "О спектакле"
+block styles
+	link(rel="stylesheet", href="styles/actors.css")
+block critical
+block content
+	section.actors
+		.container
+			h1.section-h1 Актеры
+			.actors-list
+				.actors-list__item
+					.image
+						img(src="/img/actors/1.png", alt="Иван Ожогин")
+					.description
+						.description__name.section-h4 Иван Ожогин
+						.description__role Дон Жуан
+						.description__text
+							p.
+								Актер, певец, продюсер. Исполнитель главных ролей в мюзиклах «Призрак Оперы» «Бал вампиров» (Санкт-Петербург, Берлин, Москва, Кёльн), «Джекилл и Хайд», «Мастер и Маргарита», «Демон Онегина», «Чикаго», «Кошки», «Свадьба соек», «Норд - Ост», «Красавица и чудовище», «Пола Негри», а также рок-оперы <a href="#" class="more">Подробнее</a>
+						ul.description__socials
+							li: a(href="#"): +icons("#instagram-17", 21)
+block scripts
+	script(src="js/main.js")

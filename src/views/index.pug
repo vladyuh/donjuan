@@ -13,13 +13,18 @@ block content
 		.container
 			.home__img
 				picture
+					source(srcset="./img/home/background-responsive.webp" type="image/webp" media="(min-width: 1024px)")
+					source(srcset="./img/home/background-responsive-1024.webp" type="image/webp" media="(min-width: 768px)")
+					source(srcset="./img/home/background-responsive-768.webp" type="image/webp" media="(min-width: 480px)")
+					source(srcset="./img/home/background-responsive-480.webp" type="image/webp" media="(min-width: 425px)")
 					source(srcset="./img/home/background-responsive.jpg" type="image/jpeg" media="(min-width: 1024px)")
 					source(srcset="./img/home/background-responsive-1024.jpg" type="image/jpeg" media="(min-width: 768px)")
 					source(srcset="./img/home/background-responsive-768.jpg" type="image/jpeg" media="(min-width: 480px)")
 					source(srcset="./img/home/background-responsive-480.jpg" type="image/jpeg" media="(min-width: 425px)")
-					img(src="./img/home/background-375.jpg" loading="lazy" alt="Background")
+					source(srcset="./img/home/background-375.webp" type="image/webp")
+					img(src="../img/home/background-375.jpg" loading="lazy" alt="Background")
 			.home__text
-				.section-h3 Громкая премьера!
+				.home__text-desc Громкая премьера!
 				h1.section-h1 Мюзикл «Дон Жуан»
 block scripts
 	script(src="js/main.js")

@@ -1,0 +1,30 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/headers/headers.pug
+
+
+block variables
+	- const title = "О спектакле"
+block styles
+	link(rel="stylesheet", href="styles/about.css")
+block critical
+block content
+	section.about
+		.container
+			h1.section-h1 О спектакле
+			.about-text
+				p. 
+					Громкая премьера! Мюзикл «Дон Жуан. Нерассказанная история» в Москве, Санкт-Петербурге и других городах России! Дон Жуан устал от своей славы: известность тяготит знаменитого повесу. Отшельничество - его новая страсть. Но уединение - лишь призрак утешения: вдали крадется Смерть и встреча с ней разом изменит все. Что выберет главный герой - смерть или... любовь? Мюзикл о любви, страсти, соперничестве и той самой женщине в судьбе великого любовника. История, которую вам не рассказывали раньше. 
+			.about-video(data-id="brInSakoYjI")
+				.about-video__preview
+					picture
+						source(srcset="./img/about/video-big.webp" type="image/webp" media="(min-width: 768px)")
+						source(srcset="./img/about/video-medium.webp" type="image/webp" media="(min-width: 480px)")
+						source(srcset="./img/about/video-big.jpg" type="image/jpeg" media="(min-width: 768px)")
+						source(srcset="./img/about/video-medium.jpg" type="image/jpeg" media="(min-width: 480px)")
+						source(srcset="./img/about/video.webp" type="image/webp")
+						img(src="../img/about/video.jpg" loading="lazy" alt="Background")
+				.about-video__play
+					img(src="../img/about/video-play.png" alt="Play" loading="lazy")
+block scripts
+	script(src="js/main.js")

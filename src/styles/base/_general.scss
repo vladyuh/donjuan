@@ -13,6 +13,7 @@ html {
     letter-spacing: normal;
     scroll-behavior: smooth;
     background: #131416;
+    font-family: 'Gilroy', sans-serif;
 }
 
 button:active,
@@ -71,7 +72,7 @@ main {
     min-height: 100vh;
 
     .page-sidebar {
-        display: none;
+        position: relative;
 
         @media screen and (min-width: 1367px) {
             display: block;
@@ -91,6 +92,10 @@ main {
 .container {
     margin: 0 auto;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 25px;
     max-width: 1245px;
+
+    @media screen and (min-width: 576px) {
+        padding: 0 45px;        
+    }
 }
