@@ -5,6 +5,7 @@ include ../../blocks/components/headers/headers.pug
 
 block variables
 	- const title = "О спектакле"
+	- const bodyClass = "about-page"
 block styles
 	link(rel="stylesheet", href="styles/about.css")
 block critical
@@ -28,3 +29,4 @@ block content
 					img(src="../img/about/video-play.png" alt="Play" loading="lazy")
 block scripts
 	script(src="js/main.js")
+	script(src="js/about.js")

@@ -2,7 +2,6 @@
 window.onload = function () {
     document.querySelector('body').classList.remove('perf-no-animation');
 }
-
 //fixed header
 window.onscroll = function () {
     var header = document.querySelector("header");
@@ -13,15 +12,6 @@ window.onscroll = function () {
         header.classList.remove("sticky");
     }
 };
-
-//100vh hack
-var vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
-window.addEventListener("resize", function () {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
-});
-
 //Mobile menu init
 function mobileMenu() {
     var toggle = document.querySelector('.header-burger');
@@ -47,35 +37,17 @@ function mobileMenu() {
         body.classList.toggle('mobile');
     }
 }
-
 var mobileMenu = new mobileMenu();
-
 document.querySelector('.header-burger').addEventListener('click', function (e) {
     e.preventDefault();
     mobileMenu.onToggle();
 });
-
 var navLinks = document.querySelectorAll('.mobileMenu-nav__ul li a');
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', function () {
         mobileMenu.onClose();
     });
 }
-
-var video = document.querySelectorAll('.about-video');
-if (video.length != 0) {
-    video[0].addEventListener('click', function () {
-        const videoId = this.getAttribute('data-id');
-        var iframe = document.createElement('iframe');
-        iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0";
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('width', "100%");
-        iframe.setAttribute('height', "100%");
-        this.append(iframe);
-        this.classList.add('play');
-    });
-}
-
 var moreLink = document.querySelectorAll('.actors-list__item .description .more, .team-list__item .description .more');
 if (moreLink.length != 0) {
     for (var i = 0; i < moreLink.length; i++) {
@@ -85,27 +57,5 @@ if (moreLink.length != 0) {
             parent.querySelector('.description__text-full').classList.toggle('hidden');
             this.classList.toggle('is-active');
         })
-    }
-}
-
-window.addEventListener('load', function () {
-    var scripts = document.createElement('script');
-    scripts.src = "https://api-maps.yandex.ru/2.1/?apikey=17fcb403-dca9-44b3-87ea-497e17b51d13&lang=ru_RU";
-    scripts.type = "text/javascript";
-    document.body.appendChild(scripts);
-    scripts.onload = initMaps;
-})
-
-function initMaps() {
-    var maps = document.querySelectorAll('.map-container .map');
-    ymaps.ready(init);
-    function init() {
-        for (var i = 0; i < maps.length; i++) {
-            var myMap = new ymaps.Map(maps[i].getAttribute('id'), {
-                center: [maps[i].dataset.x, maps[i].dataset.y],
-                controls: [],
-                zoom: 16
-            });
-        }
     }
 }

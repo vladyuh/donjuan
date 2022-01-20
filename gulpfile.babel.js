@@ -30,8 +30,8 @@ const requireDir = require("require-dir"),
         },
         scripts: {
             src: [
-                "./src/js/main.js",
-                "./src/js/import/lazysizes.min.js",
+                "./src/js/*.js",
+                "./src/js/**/*.js"
             ],
             dist: "./dist/js/",
             watch: [

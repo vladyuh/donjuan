@@ -14,4 +14,16 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   flex-grow: 0;
+
+  &-transparent{
+    background: transparent;
+    border: 1px solid #5B5B5B;
+
+    &:hover{
+      background: #fff;
+      color: #000;
+      border: 1px solid transparent;
+    }
+  }
+
 }

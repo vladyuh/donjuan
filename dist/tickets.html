@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Партнеры</title>
+    <title>Купить билеты</title>
     <meta name="theme-color" content="#131416">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,9 +26,9 @@
     <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles/main.min.css">
-    <link rel="stylesheet" href="styles/partners.min.css">
+    <link rel="stylesheet" href="styles/tickets.min.css">
   </head>
-  <body class="perf-no-animation partners-page">
+  <body class="perf-no-animation tickets-page">
     <header>
       <div class="container">
         <div class="header">
@@ -87,30 +87,86 @@
         </div>
       </div>
       <div class="page-content">
-        <section class="partners">
+        <section class="tickets">
           <div class="container">
-            <h1 class="section-h1">Партнеры</h1>
-            <div class="partners-cities">
-              <div class="partners-cities__item">
-                <div class="title">Партнеры в Санкт-Петербурге</div>
-                <div class="images">
-                  <div class="images__image"><img src="../img/partners/1.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/2.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/3.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/4.svg" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/5.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/6.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/7.png" loading="lazy" alt=""></div>
+            <h1 class="section-h1">Купить билеты</h1>
+            <div class="tickets-toggles">
+              <div class="btn btn-transparent toggle is-active">Все города</div>
+              <div class="btn btn-transparent toggle">Санкт-Петербург</div>
+              <div class="btn btn-transparent toggle">Москва</div>
+            </div>
+            <div class="tickets-cities">
+              <div class="tickets-cities__item">
+                <div class="image"><img src="../img/tickets/1.jpg" loading="lazy" alt=""></div>
+                <div class="badge">
+                  <div class="badge__image"><img src="../img/tickets/logo.png" loading="lazy" alt=""></div>
+                  <div class="badge__restriction">16+</div>
+                </div>
+                <div class="content">
+                  <div class="content__title section-h4">Санкт-Петербург</div>
+                  <div class="content__date">20 января 19:00</div>
+                  <div class="content__buttons"><a class="btn" href="#">КУПИТЬ БИЛЕТ</a><a class="btn btn-transparent" href="#consist-1">СОСТАВ</a>
+                    <!--.consist#consist-1
+                    a.consist__close(href="#close"): +icons('#close-grey', 28)
+                    .consist__list
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-1.png", alt="")
+                    		.consist__list-text
+                    			.name Иван Ожогин
+                    			.role Дон Жуан
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-2.png", alt="")
+                    		.consist__list-text
+                    			.name Мария Геворгян
+                    			.role Консуэла
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-3.png", alt="")
+                    		.consist__list-text
+                    			.name Нонна Гришаева
+                    			.role Пилар
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-4.png", alt="")
+                    		.consist__list-text
+                    			.name Дмитрий Янковский
+                    			.role Хозяин таверны
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-5.png", alt="")
+                    		.consist__list-text
+                    			.name Александр Казьмин
+                    			.role Серхио
+                    	.consist__list-item
+                    		.consist__list-image: img(src="../img/tickets/actor-6.png", alt="")
+                    		.consist__list-text
+                    			.name Александр Рагулин
+                    			.role Карлос
+                    .consist__desc.
+                    	Организатор вправе внести изменения в состав актёров без предварительного уведомления
+                    -->
+                  </div>
                 </div>
               </div>
-              <div class="partners-cities__item">
-                <div class="title">Партнеры в Москве</div>
-                <div class="images">
-                  <div class="images__image"><img src="../img/partners/8.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/9.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/3.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/10.png" loading="lazy" alt=""></div>
-                  <div class="images__image"><img src="../img/partners/11.png" loading="lazy" alt=""></div>
+              <div class="tickets-cities__item">
+                <div class="image"><img src="../img/tickets/2.jpg" loading="lazy" alt=""></div>
+                <div class="badge">
+                  <div class="badge__image"><img src="../img/tickets/logo.png" loading="lazy" alt=""></div>
+                  <div class="badge__restriction">16+</div>
+                </div>
+                <div class="content">
+                  <div class="content__title section-h4">Москва</div>
+                  <div class="content__date">23 января 23:00</div>
+                  <div class="content__buttons"><a class="btn" href="#">КУПИТЬ БИЛЕТ</a><a class="btn btn-transparent" href="#consist-2">СОСТАВ</a></div>
+                </div>
+              </div>
+              <div class="tickets-cities__item">
+                <div class="image"><img src="../img/tickets/3.jpg" loading="lazy" alt=""></div>
+                <div class="badge">
+                  <div class="badge__image"><img src="../img/tickets/logo.png" loading="lazy" alt=""></div>
+                  <div class="badge__restriction">16+</div>
+                </div>
+                <div class="content">
+                  <div class="content__title section-h4">Есентуки</div>
+                  <div class="content__date">23 января 19:00</div>
+                  <div class="content__buttons"><a class="btn" href="#">КУПИТЬ БИЛЕТ</a><a class="btn btn-transparent" href="#consist-3">СОСТАВ</a></div>
                 </div>
               </div>
             </div>
@@ -121,5 +177,6 @@
     <footer>
     </footer>
     <script src="js/main.js"></script>
+    <!--script(src="js/contacts.js")-->
   </body>
 </html>

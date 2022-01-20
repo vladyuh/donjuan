@@ -30,7 +30,7 @@ html(lang="ru")
 		link(rel="stylesheet" href="styles/main.css")
 		block styles
 		block critical
-	body.perf-no-animation.page
+	body.perf-no-animation(class=(bodyClass))
 		header
 			block header
 				include ../../blocks/modules/header/header.pug

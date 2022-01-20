@@ -30,6 +30,7 @@ header {
         width: 43px;
         height: 43px;
         display: block;
+        cursor: pointer;
 
         &.open {
             .header-burger__open {
@@ -146,6 +147,16 @@ header {
                 border-radius: 50px;
                 height: 52px;
             }
+        }
+    }
+}
+
+.tickets-page{
+    .header-buy__btn{
+        display: none;
+
+        @media screen and (min-width: 641px){
+            display: flex;
         }
     }
 }
