@@ -7,8 +7,8 @@ block variables
 	- const title = "Творческая команда"
 	- const bodyClass = "team-page"
 block styles
-	link(rel="stylesheet", href="styles/team.css")
 block critical
+	include ../../styles/critical/team.css
 block content
 	section.team
 		.container
@@ -77,4 +77,5 @@ block content
 								span.show Подробнее
 								span.hide Скрыть
 block scripts
+	link(rel="stylesheet" href="styles/team.css" type="text/css")
 	script(src="js/main.js")

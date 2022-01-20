@@ -27,9 +27,9 @@ html(lang="ru")
 		link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
 		link(rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin)
 		link(rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin)
-		link(rel="stylesheet" href="styles/main.css")
 		block styles
-		block critical
+		style
+			block critical
 	body.perf-no-animation(class=(bodyClass))
 		header
 			block header
@@ -42,4 +42,5 @@ html(lang="ru")
 		footer
 			block footer
 				include ../../blocks/modules/footer/footer.pug
+		link(rel="stylesheet" href="styles/main.css" type="text/css")
 		block scripts

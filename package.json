@@ -67,6 +67,7 @@
         "yargs": "~15.4.1"
     },
     "dependencies": {
+        "critical": "^4.0.1",
         "gulp-image-resize": "^0.13.1"
     },
     "husky": {

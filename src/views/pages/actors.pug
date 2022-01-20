@@ -7,8 +7,8 @@ block variables
 	- const title = "Актеры"
 	- const bodyClass = "actors-page"
 block styles
-	link(rel="stylesheet", href="styles/actors.css")
 block critical
+	include ../../styles/critical/actors.css
 block content
 	section.actors
 		.container
@@ -83,4 +83,5 @@ block content
 						ul.description__socials
 							li: a(href="#"): +icons("#instagram-17", 21)
 block scripts
+	link(rel="stylesheet" href="styles/actors.css" type="text/css")
 	script(src="js/main.js")

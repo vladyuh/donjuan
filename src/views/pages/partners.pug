@@ -7,8 +7,8 @@ block variables
 	- const title = "Партнеры"
 	- const bodyClass = "partners-page"
 block styles
-	link(rel="stylesheet", href="styles/partners.css")
 block critical
+	include ../../styles/critical/partners.css
 block content
 	section.partners
 		.container
@@ -45,4 +45,5 @@ block content
 						.images__image
 							img(src="../img/partners/11.png", loading="lazy", alt="")
 block scripts
+	link(rel="stylesheet" href="styles/partners.css" type="text/css")
 	script(src="js/main.js")

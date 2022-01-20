@@ -7,8 +7,8 @@ block variables
 	- const title = "Контакты"
 	- const bodyClass = "contacts-page"
 block styles
-	link(rel="stylesheet", href="styles/contacts.css")
 block critical
+	include ../../styles/critical/contacts.css
 block content
 	section.contacts
 		.container
@@ -33,6 +33,7 @@ block content
 					.location Театриум на Серпуховке Павловская ул. 6
 					.map-container
 						.map#moscow(data-x="55.719832" data-y="37.626912")
-block scripts	
+block scripts
+	link(rel="stylesheet" href="styles/contacts.css" type="text/css")
 	script(src="js/main.js")
 	script(src="js/contacts.js")

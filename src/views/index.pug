@@ -7,8 +7,8 @@ block variables
 	- const title = "Главная"
 	- const bodyClass = "main-page"
 block styles
-	link(rel="stylesheet", href="styles/index.css")
 block critical
+	include ../styles/critical/index.css
 block content
 	section.home
 		.container
@@ -28,4 +28,5 @@ block content
 				.home__text-desc Громкая премьера!
 				h1.section-h1 Мюзикл «Дон Жуан»
 block scripts
+	link(rel="stylesheet" href="styles/index.css" type="text/css")
 	script(src="js/main.js")
