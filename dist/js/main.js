@@ -1,5 +1,5 @@
 //Remove animations on load
-window.onload = function() {
+window.onload = function () {
     document.querySelector('body').classList.remove('perf-no-animation');
 }
 
@@ -17,7 +17,7 @@ window.onscroll = function () {
 //100vh hack
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
 });
@@ -41,7 +41,7 @@ function mobileMenu() {
         body.classList.remove('mobile');
     }
 
-    this.onToggle = function(){
+    this.onToggle = function () {
         toggle.classList.toggle('open');
         menu.classList.toggle('opened');
         body.classList.toggle('mobile');
@@ -50,21 +50,21 @@ function mobileMenu() {
 
 var mobileMenu = new mobileMenu();
 
-document.querySelector('.header-burger').addEventListener('click', function(e) {
+document.querySelector('.header-burger').addEventListener('click', function (e) {
     e.preventDefault();
     mobileMenu.onToggle();
 });
 
 var navLinks = document.querySelectorAll('.mobileMenu-nav__ul li a');
-for(var i=0;i<navLinks.length;i++){
-    navLinks[i].addEventListener('click', function(){
+for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', function () {
         mobileMenu.onClose();
     });
 }
 
 var video = document.querySelectorAll('.about-video');
-if(video.length != 0){
-    video[0].addEventListener('click', function(){
+if (video.length != 0) {
+    video[0].addEventListener('click', function () {
         const videoId = this.getAttribute('data-id');
         var iframe = document.createElement('iframe');
         iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0";
@@ -73,6 +73,39 @@ if(video.length != 0){
         iframe.setAttribute('height', "100%");
         this.append(iframe);
         this.classList.add('play');
-        
     });
+}
+
+var moreLink = document.querySelectorAll('.actors-list__item .description .more, .team-list__item .description .more');
+if (moreLink.length != 0) {
+    for (var i = 0; i < moreLink.length; i++) {
+        moreLink[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            var parent = this.parentNode;
+            parent.querySelector('.description__text-full').classList.toggle('hidden');
+            this.classList.toggle('is-active');
+        })
+    }
+}
+
+window.addEventListener('load', function () {
+    var scripts = document.createElement('script');
+    scripts.src = "https://api-maps.yandex.ru/2.1/?apikey=17fcb403-dca9-44b3-87ea-497e17b51d13&lang=ru_RU";
+    scripts.type = "text/javascript";
+    document.body.appendChild(scripts);
+    scripts.onload = initMaps;
+})
+
+function initMaps() {
+    var maps = document.querySelectorAll('.map-container .map');
+    ymaps.ready(init);
+    function init() {
+        for (var i = 0; i < maps.length; i++) {
+            var myMap = new ymaps.Map(maps[i].getAttribute('id'), {
+                center: [maps[i].dataset.x, maps[i].dataset.y],
+                controls: [],
+                zoom: 16
+            });
+        }
+    }
 }

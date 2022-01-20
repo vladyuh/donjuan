@@ -1,0 +1,47 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/headers/headers.pug
+
+
+block variables
+	- const title = "Партнеры"
+block styles
+	link(rel="stylesheet", href="styles/partners.css")
+block critical
+block content
+	section.partners
+		.container
+			h1.section-h1 Партнеры
+			.partners-cities
+				.partners-cities__item
+					.title Партнеры в Санкт-Петербурге
+					.images
+						.images__image
+							img(src="../img/partners/1.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/2.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/3.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/4.svg", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/5.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/6.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/7.png", loading="lazy", alt="")
+				.partners-cities__item
+					.title Партнеры в Москве
+					.images
+						.images__image
+							img(src="../img/partners/8.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/9.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/3.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/10.png", loading="lazy", alt="")
+						.images__image
+							img(src="../img/partners/11.png", loading="lazy", alt="")
+block scripts
+	script(src="js/main.js")

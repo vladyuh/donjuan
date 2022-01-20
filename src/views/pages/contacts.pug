@@ -1,0 +1,36 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/headers/headers.pug
+
+
+block variables
+	- const title = "Контакты"
+block styles
+	link(rel="stylesheet", href="styles/contacts.css")
+block critical
+block content
+	section.contacts
+		.container
+			h1.section-h1 Контакты
+			.contacts-data
+				.contacts-data__item
+					.phone: a(href="tel:+79197618606") +7 (919) 761-86-06
+					.mail: a(href="mailto:info@donjuanmusical.ru") info@donjuanmusical.ru
+				.contacts-data__item
+					ul.socials
+						li: a(href="#"): +icons('#instagram-17', 24)
+						li: a(href="#"): +icons('#vk-19', 24)
+						li: a(href="#"): +icons('#facebook-21', 24)
+			.contacts-maps
+				.contacts-maps__item
+					.city.section-h4 Санкт-Петербург
+					.location Театр Мюзик Холл Александровский парк 4
+					.map-container
+						.map#saint(data-x="59.955227" data-y="30.310338")
+				.contacts-maps__item
+					.city.section-h4 Москва
+					.location Театриум на Серпуховке Павловская ул. 6
+					.map-container
+						.map#moscow(data-x="55.719832" data-y="37.626912")
+block scripts
+	script(src="js/main.js")

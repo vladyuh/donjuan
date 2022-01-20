@@ -25,9 +25,14 @@ h2 {
 .section-h3,
 h3 {
     font-weight: 600;
-    font-size: 36px;
-    line-height: 72px / 64px * 100%;
+    font-size: 24px;
+    line-height: 30px / 24px * 100%;
     margin: 0 0 20px;
+
+    @media screen and (min-width: 1367px) {
+        font-size: 36px;
+        line-height: 45px;        
+    }
 }
 
 .section-h4,
