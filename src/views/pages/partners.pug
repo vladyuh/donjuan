@@ -18,32 +18,55 @@ block content
 					.title Партнеры в Санкт-Петербурге
 					.images
 						.images__image
-							img(src="../img/partners/1.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/1.webp" type="image/webp")
+								img(src="../img/partners/1.png", loading="eager", alt="Партнеры" width="119" height="44")
 						.images__image
-							img(src="../img/partners/2.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/2.webp" type="image/webp")
+								img(src="../img/partners/2.png", loading="eager", alt="Партнеры" width="119" height="41")
 						.images__image
-							img(src="../img/partners/3.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/3.webp" type="image/webp")
+								img(src="../img/partners/3.png", loading="eager", alt="Партнеры" width="81" height="55")
 						.images__image
-							img(src="../img/partners/4.svg", loading="lazy", alt="")
+							picture
+								img(src="../img/partners/4.svg", loading="eager", alt="Партнеры" width="93" height="77")
 						.images__image
-							img(src="../img/partners/5.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/5.webp" type="image/webp")
+								img(src="../img/partners/5.png", loading="eager", alt="Партнеры" width="103" height="45")
 						.images__image
-							img(src="../img/partners/6.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/6.webp" type="image/webp")
+								img(src="../img/partners/6.png", loading="eager", alt="Партнеры" width="120" height="35")
 						.images__image
-							img(src="../img/partners/7.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/7.webp" type="image/webp")
+								img(src="../img/partners/7.png", loading="eager", alt="Партнеры" width="94" height="94")
 				.partners-cities__item
 					.title Партнеры в Москве
 					.images
 						.images__image
-							img(src="../img/partners/8.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/8.webp" type="image/webp")
+								img(src="../img/partners/8.png", loading="eager", alt="Партнеры" width="86" height="62")
 						.images__image
-							img(src="../img/partners/9.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/9.webp" type="image/webp")
+								img(src="../img/partners/9.png", loading="eager", alt="Партнеры" width="102" height="49")
 						.images__image
-							img(src="../img/partners/3.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/3.webp" type="image/webp")
+								img(src="../img/partners/3.png", loading="eager", alt="Партнеры" width="81" height="55")
 						.images__image
-							img(src="../img/partners/10.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/10.webp" type="image/webp")
+								img(src="../img/partners/10.png", loading="eager", alt="Партнеры" width="118" height="31")
 						.images__image
-							img(src="../img/partners/11.png", loading="lazy", alt="")
+							picture
+								source(srcset="../img/partners/11.webp" type="image/webp")
+								img(src="../img/partners/11.png", loading="eager", alt="Партнеры" width="106" height="84")
 block scripts
-	link(rel="stylesheet" href="styles/partners.css" type="text/css")
+	link(rel="preload" as="style" href="styles/partners.css" type="text/css" onload="this.rel='stylesheet'")
 	script(src="js/main.js")

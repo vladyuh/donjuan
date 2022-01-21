@@ -3,12 +3,15 @@ include ../../../views/helpers/mixins.pug
   .header
     .header-logo
       .header-logo__img
-        a(href="/"): img(src="../img/common/logo.png", alt="Логотип")
+        a(href="/" title="Главная")
+          picture
+            source(srcset="../img/common/logo.webp" type="image/webp")
+            img(src="../img/common/logo.png", alt="Логотип", loading="eager", width="211" height="97")
     .header-buy
       .header-buy__desc
         span Также приобрести билеты<br> можно по телефону
-        a(href="tel:+79197618606") +7 (919) 761-86-06
-      a(href="tickets.html").header-buy__btn.btn Купить билеты
+        a(href="tel:+79197618606" title="Телефон") +7 (919) 761-86-06
+      a(href="tickets.html" title="Купить билеты").header-buy__btn.btn Купить билеты
     .header-burger
       .burger
         +icons('#burger', 43, 'header-burger__open')

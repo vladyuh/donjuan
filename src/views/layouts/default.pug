@@ -42,5 +42,5 @@ html(lang="ru")
 		footer
 			block footer
 				include ../../blocks/modules/footer/footer.pug
-		link(rel="stylesheet" href="styles/main.css" type="text/css")
+		link(rel="preload" as="style" href="styles/main.css" type="text/css" onload="this.rel='stylesheet'")
 		block scripts

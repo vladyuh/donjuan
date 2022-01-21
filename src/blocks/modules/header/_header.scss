@@ -6,10 +6,27 @@ header {
     z-index: 3;
     height: 121px;
     width: 100%;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease;
 
     &.sticky{
+        height: auto;
         background: #131416;
+        .header{
+            padding: 6px 0;
+        }
+
+        .header-logo{
+            max-width: 158px;
+        }
+
+        .header-logo__img{
+            padding-top: 73px / 158px * 100%;
+            img{
+                width: 158px;
+                height: 73px;
+            }
+        }
+
     }
 
     .container {
@@ -25,6 +42,7 @@ header {
     display: flex;
     align-items: center;
     padding: 12px 0;
+    transition: all 0.25s ease;
 
     &-burger {
         width: 43px;
@@ -72,6 +90,8 @@ header {
             position: relative;
 
             img {
+                width: 211px;
+                height: 97px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -145,6 +165,7 @@ header {
                 width: 240px;
                 position: static;
                 border-radius: 50px;
+                padding: 15px;
                 height: 52px;
             }
         }

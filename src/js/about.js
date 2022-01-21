@@ -7,6 +7,7 @@ if (video.length != 0) {
         iframe.setAttribute('allowfullscreen', '');
         iframe.setAttribute('width', "100%");
         iframe.setAttribute('height', "100%");
+        iframe.setAttribute('frameborder', "0");
         this.append(iframe);
         this.classList.add('play');
     });

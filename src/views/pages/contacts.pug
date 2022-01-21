@@ -7,6 +7,10 @@ block variables
 	- const title = "Контакты"
 	- const bodyClass = "contacts-page"
 block styles
+	link(rel="preconnect" href="//yandex.ru")
+	link(rel="dns-prefetch" href="//yandex.ru")
+	link(rel="preconnect", href="//yastatic.net")
+	link(rel="dns-prefetch" href="//yastatic.net")
 block critical
 	include ../../styles/critical/contacts.css
 block content
@@ -15,25 +19,31 @@ block content
 			h1.section-h1 Контакты
 			.contacts-data
 				.contacts-data__item
-					.phone: a(href="tel:+79197618606") +7 (919) 761-86-06
-					.mail: a(href="mailto:info@donjuanmusical.ru") info@donjuanmusical.ru
+					.phone: a(href="tel:+79197618606" title="Телефон") +7 (919) 761-86-06
+					.mail: a(href="mailto:info@donjuanmusical.ru" title="Почта") info@donjuanmusical.ru
 				.contacts-data__item
 					ul.socials
-						li: a(href="#"): +icons('#instagram-17', 24)
-						li: a(href="#"): +icons('#vk-19', 24)
-						li: a(href="#"): +icons('#facebook-21', 24)
+						li: a(href="#" title="Instagram"): +icons('#instagram-17', 24)
+						li: a(href="#" title="Вконтакте"): +icons('#vk-19', 24)
+						li: a(href="#" title="Facebook"): +icons('#facebook-21', 24)
 			.contacts-maps
 				.contacts-maps__item
 					.city.section-h4 Санкт-Петербург
 					.location Театр Мюзик Холл Александровский парк 4
 					.map-container
+						picture
+							source(srcset="img/contacts/1.webp" type="image/webp")
+							img(src="img/contacts/1.jpg" loading="eager" alt="Карта")
 						.map#saint(data-x="59.955227" data-y="30.310338")
 				.contacts-maps__item
 					.city.section-h4 Москва
 					.location Театриум на Серпуховке Павловская ул. 6
 					.map-container
+						picture
+							source(srcset="img/contacts/2.webp" type="image/webp")
+							img(src="img/contacts/2.jpg" loading="eager" alt="Карта")
 						.map#moscow(data-x="55.719832" data-y="37.626912")
 block scripts
-	link(rel="stylesheet" href="styles/contacts.css" type="text/css")
+	link(rel="preload" as="style" href="styles/contacts.css" type="text/css" onload="this.rel='stylesheet'")
 	script(src="js/main.js")
 	script(src="js/contacts.js")

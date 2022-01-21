@@ -28,5 +28,5 @@ block content
 				.home__text-desc Громкая премьера!
 				h1.section-h1 Мюзикл «Дон Жуан»
 block scripts
-	link(rel="stylesheet" href="styles/index.css" type="text/css")
+	link(rel="preload" as="style" href="styles/index.css" type="text/css" onload="this.rel='stylesheet'")
 	script(src="js/main.js")

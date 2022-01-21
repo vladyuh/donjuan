@@ -14,84 +14,153 @@ block content
         .container
             h1.section-h1 Купить билеты
             .tickets-toggles
-                .btn.btn-transparent.toggle.is-active Все города
-                .btn.btn-transparent.toggle Санкт-Петербург
-                .btn.btn-transparent.toggle Москва
+                .btn.btn-transparent.toggle.is-active(data-city="all") Все города
+                .btn.btn-transparent.toggle(data-city="saint") Санкт-Петербург
+                .btn.btn-transparent.toggle(data-city="moscow") Москва
+                .btn.btn-transparent.toggle(data-city="esentyki") Есентуки
             .tickets-cities
-                .tickets-cities__item
+                .tickets-cities__item(data-city="saint")
                     .image
-                        img(src="../img/tickets/1.jpg" loading="lazy" alt="")
+                        picture
+                            source(srcset="../img/tickets/1.webp" type="image/webp")
+                            img(src="../img/tickets/1.jpg" loading="eager" alt="Фон")
                     .badge
                         .badge__image
-                            img(src="../img/tickets/logo.png" loading="lazy" alt="")
+                            img(src="../img/tickets/logo.png" loading="eager" alt="Дон Жуан" width="158" height="73")
                         .badge__restriction 16+
                     .content
                         .content__title.section-h4 Санкт-Петербург
                         .content__date 20 января 19:00
                         .content__buttons
-                            a.btn(href="#") КУПИТЬ БИЛЕТ
-                            a.btn.btn-transparent(href="#consist-1") СОСТАВ
-                            //.consist#consist-1
-                                a.consist__close(href="#close"): +icons('#close-grey', 28)
-                                .consist__list
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-1.png", alt="")
-                                        .consist__list-text
-                                            .name Иван Ожогин
-                                            .role Дон Жуан
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-2.png", alt="")
-                                        .consist__list-text
-                                            .name Мария Геворгян
-                                            .role Консуэла
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-3.png", alt="")
-                                        .consist__list-text
-                                            .name Нонна Гришаева
-                                            .role Пилар
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-4.png", alt="")
-                                        .consist__list-text
-                                            .name Дмитрий Янковский
-                                            .role Хозяин таверны
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-5.png", alt="")
-                                        .consist__list-text
-                                            .name Александр Казьмин
-                                            .role Серхио
-                                    .consist__list-item
-                                        .consist__list-image: img(src="../img/tickets/actor-6.png", alt="")
-                                        .consist__list-text
-                                            .name Александр Рагулин
-                                            .role Карлос
-                                .consist__desc.
-                                    Организатор вправе внести изменения в состав актёров без предварительного уведомления
-                .tickets-cities__item
+                            a.btn.content__buy(href="#") КУПИТЬ БИЛЕТ
+                            .btn.btn-transparent.content__contains
+                                span СОСТАВ
+                                a.popup(href="#consist-1" title="Состав")
+                                .consist#consist-1
+                                    a.consist__close(href="#close"): +icons('#close-grey', 28)
+                                    .consist__list
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-1.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Иван Ожогин
+                                                .role Дон Жуан
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-2.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Мария Геворгян
+                                                .role Консуэла
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-3.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Нонна Гришаева
+                                                .role Пилар
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-4.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Дмитрий Янковский
+                                                .role Хозяин таверны
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-5.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Александр Казьмин
+                                                .role Серхио
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-6.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Александр Рагулин
+                                                .role Карлос
+                                    .consist__desc.
+                                        Организатор вправе внести изменения в состав актёров без предварительного уведомления
+                .tickets-cities__item(data-city="moscow")
                     .image
-                        img(src="../img/tickets/2.jpg" loading="lazy" alt="")
+                        picture
+                            source(srcset="../img/tickets/2.webp" type="image/webp")
+                            img(src="../img/tickets/2.jpg" loading="eager" alt="Фон")
                     .badge
                         .badge__image
-                            img(src="../img/tickets/logo.png" loading="lazy" alt="")
+                            img(src="../img/tickets/logo.png" loading="eager" alt="Дон Жуан" width="158" height="73")
                         .badge__restriction 16+
                     .content
                         .content__title.section-h4 Москва
                         .content__date 23 января 23:00
                         .content__buttons
-                            a.btn(href="#") КУПИТЬ БИЛЕТ
-                            a.btn.btn-transparent(href="#consist-2") СОСТАВ
-                .tickets-cities__item
+                            a.btn.content__buy(href="#") КУПИТЬ БИЛЕТ
+                            .btn.btn-transparent.content__contains
+                                span СОСТАВ
+                                a.popup(href="#consist-2" title="Состав")
+                                .consist#consist-2
+                                    a.consist__close(href="#close"): +icons('#close-grey', 28)
+                                    .consist__list
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-1.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Иван Ожогин
+                                                .role Дон Жуан
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-2.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Мария Геворгян
+                                                .role Консуэла
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-3.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Нонна Гришаева
+                                                .role Пилар
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-4.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Дмитрий Янковский
+                                                .role Хозяин таверны
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-5.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Александр Казьмин
+                                                .role Серхио
+                                    .consist__desc.
+                                        Организатор вправе внести изменения в состав актёров без предварительного уведомления
+                .tickets-cities__item(data-city="esentyki")
                     .image
-                        img(src="../img/tickets/3.jpg" loading="lazy" alt="")
+                        picture
+                            source(srcset="../img/tickets/3.webp" type="image/webp")
+                            img(src="../img/tickets/3.jpg" loading="eager" alt="Фон")
                     .badge
                         .badge__image
-                            img(src="../img/tickets/logo.png" loading="lazy" alt="")
+                            img(src="../img/tickets/logo.png" loading="eager" alt="Дон Жуан" width="158" height="73")
                         .badge__restriction 16+
                     .content
                         .content__title.section-h4 Есентуки
                         .content__date 23 января 19:00
                         .content__buttons
-                            a.btn(href="#") КУПИТЬ БИЛЕТ
-                            a.btn.btn-transparent(href="#consist-3") СОСТАВ
+                            a.btn.content__buy(href="#") КУПИТЬ БИЛЕТ
+                            .btn.btn-transparent.content__contains
+                                span СОСТАВ
+                                a.popup(href="#consist-3" title="Состав")
+                                .consist#consist-3
+                                    a.consist__close(href="#close"): +icons('#close-grey', 28)
+                                    .consist__list
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-1.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Иван Ожогин
+                                                .role Дон Жуан
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-2.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Мария Геворгян
+                                                .role Консуэла
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-3.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Нонна Гришаева
+                                                .role Пилар
+                                        .consist__list-item
+                                            .consist__list-image: img(src="../img/tickets/actor-4.png", alt="Актер", loading="lazy", width="54", height="54")
+                                            .consist__list-text
+                                                .name Дмитрий Янковский
+                                                .role Хозяин таверны
+                                    .consist__desc.
+                                        Организатор вправе внести изменения в состав актёров без предварительного уведомления
 block scripts
-    link(rel="stylesheet" href="styles/tickets.css" type="text/css")
+    link(rel="preload" as="style" href="styles/tickets.css" type="text/css" onload="this.rel='stylesheet'")
     script(src="js/main.js")
+    script(src="js/tickets.js")

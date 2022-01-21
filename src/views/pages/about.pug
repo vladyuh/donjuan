@@ -24,10 +24,10 @@ block content
 						source(srcset="./img/about/video-big.jpg" type="image/jpeg" media="(min-width: 768px)")
 						source(srcset="./img/about/video-medium.jpg" type="image/jpeg" media="(min-width: 480px)")
 						source(srcset="./img/about/video.webp" type="image/webp")
-						img(src="../img/about/video.jpg" loading="lazy" alt="Background")
+						img(src="../img/about/video.jpg" loading="eager" alt="Background")
 				.about-video__play
-					img(src="../img/about/video-play.png" alt="Play" loading="lazy")
+					img(src="../img/about/video-play.png" alt="Play" loading="eager" width="64" height="45")
 block scripts
-	link(rel="stylesheet" href="styles/about.css" type="text/css")
+	link(rel="preload" as="style" href="styles/about.css" type="text/css" onload="this.rel='stylesheet'")
 	script(src="js/main.js")
 	script(src="js/about.js")
