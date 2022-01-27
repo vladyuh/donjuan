@@ -1,0 +1,160 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+.actors {
+  padding: 32px 0 87px;
+}
+
+.actors .section-h1 {
+  margin-bottom: 26px;
+}
+
+.actors-list__item {
+  margin-bottom: 68px;
+}
+
+.actors-list__item .image {
+  margin: 0 auto;
+  margin-bottom: 26px;
+  background: #E22D2D;
+}
+
+.actors-list__item .image__wrp {
+  margin: 0 auto;
+  position: relative;
+  padding-top: 138.80597%;
+}
+
+.actors-list__item .image__wrp img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.actors-list__item .image img {
+  width: 100%;
+  height: auto;
+}
+
+.actors-list__item .description .more {
+  color: #E22D2D;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.actors-list__item .description .more span.hide {
+  display: none;
+}
+
+.actors-list__item .description .more.is-active span.hide {
+  display: inline;
+}
+
+.actors-list__item .description .more.is-active span.show {
+  display: none;
+}
+
+.actors-list__item .description__name {
+  margin-bottom: 12px;
+}
+
+.actors-list__item .description__role {
+  font-size: 16px;
+  line-height: 19px;
+  color: #727272;
+}
+
+.actors-list__item .description__text {
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 189.5%;
+}
+
+.actors-list__item .description__text p {
+  display: inline;
+}
+
+.actors-list__item .description__text p.hidden {
+  display: none;
+}
+
+.actors-list__item .description__socials {
+  margin-top: 14px;
+  display: flex;
+}
+
+.actors-list__item .description__socials li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  border: 1px solid #5B5B5B;
+  transition: all 0.25s ease;
+}
+
+.actors-list__item .description__socials li a:hover {
+  background: rgba(91, 91, 91, 0.3);
+}
+
+@media screen and (min-width: 481px) {
+  .actors-list__item .image {
+    max-width: 342px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .actors .section-h1 {
+    margin-bottom: 36px;
+  }
+
+  .actors-list__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .actors-list__item .image {
+    width: 41.05642%;
+    max-width: 342px;
+  }
+
+  .actors-list__item .description {
+    padding-left: 32px;
+    width: 51.62065%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .actors-list__item .description {
+    padding-left: 59px;
+    width: 72.93173%;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .actors .section-h1 {
+    margin-bottom: 84px;
+  }
+
+  .actors-list__item .image__wrp {
+    padding-top: 135.96491%;
+  }
+
+  .actors-list__item .description__role {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .actors-list__item .description__text {
+    margin-top: 39px;
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+/*# sourceMappingURL=maps/actors.css.map */

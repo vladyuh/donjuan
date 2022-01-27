@@ -1,1 +1,5 @@
-<svg width="43" height="26" viewBox="0 0 43 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#fff" stroke-width="2" d="M0 1h43M0 13h43M22 25h21"/></svg>
+<svg width="43" height="26" viewBox="0 0 43 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="1" x2="43" y2="1" stroke="white" stroke-width="2"/>
+<line y1="13" x2="43" y2="13" stroke="white" stroke-width="2"/>
+<line x1="22" y1="25" x2="43" y2="25" stroke="white" stroke-width="2"/>
+</svg>

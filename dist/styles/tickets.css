@@ -1,0 +1,269 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+.tickets {
+  padding: 32px 0 87px;
+}
+
+.tickets .section-h1 {
+  margin-bottom: 26px;
+}
+
+.tickets-toggles {
+  display: flex;
+  overflow-y: auto;
+  margin: 0 -25px;
+  margin-bottom: 46px;
+}
+
+.tickets-toggles .toggle {
+  flex-shrink: 0;
+  padding: 11px 20px;
+  height: 41px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 12px;
+  transition: all 0.25s ease;
+}
+
+.tickets-toggles .toggle.is-active {
+  border-color: white;
+}
+
+.tickets-toggles .toggle:nth-child(1) {
+  margin-left: 25px;
+}
+
+.tickets-toggles .toggle:nth-last-child(1) {
+  margin-right: 25px;
+}
+
+.tickets-cities {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tickets-cities__item {
+  width: 100%;
+  position: relative;
+  padding: 14px 20px 33px;
+  min-height: 465px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+.tickets-cities__item .badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -10px;
+}
+
+.tickets-cities__item .badge__image {
+  width: 158px;
+  height: 73px;
+}
+
+.tickets-cities__item .badge__restriction {
+  width: 59px;
+  height: 38px;
+  background: #131416;
+  border-radius: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.125em;
+}
+
+.tickets-cities__item .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.tickets-cities__item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.tickets-cities__item .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tickets-cities__item .content__title {
+  margin-bottom: 3px;
+}
+
+.tickets-cities__item .content__date {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 32px;
+}
+
+.tickets-cities__item .content__buttons {
+  display: flex;
+  margin: 0 -8px;
+}
+
+.tickets-cities__item .content__buttons .btn {
+  padding: 11px 8px;
+  margin: 0 8px;
+  height: 45px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.tickets-cities__item .content__contains {
+  position: relative;
+}
+
+.tickets-cities__item .content__contains a.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.tickets-cities__item .consist {
+  display: none;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  max-height: 100vh;
+  z-index: 4;
+  padding: 32px 32px 30px 32px;
+  overflow-y: auto;
+}
+
+.tickets-cities__item .consist__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.tickets-cities__item .consist__desc {
+  font-size: 13px;
+  line-height: 19px;
+  color: #635F5F;
+  margin-top: 7px;
+}
+
+.tickets-cities__item .consist__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tickets-cities__item .consist__list-image {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #181717;
+}
+
+.tickets-cities__item .consist__list-text {
+  padding-left: 18px;
+  color: #181717;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.tickets-cities__item .consist__list-text .name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+
+.tickets-cities__item .consist:target {
+  display: block;
+}
+
+@media screen and (min-width: 361px) {
+  .tickets-cities__item {
+    padding: 14px 24px 33px;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .tickets-cities {
+    margin: 0 -15px;
+  }
+
+  .tickets-cities__item {
+    width: calc(50% - 30px);
+    margin: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  .tickets-cities__item .content__contains:hover::after {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+  }
+
+  .tickets-cities__item .content__contains:hover .consist {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    display: block;
+    left: auto;
+    right: auto;
+    width: 348px;
+    max-height: 544px;
+    z-index: 2;
+  }
+
+  .tickets-cities__item .content__contains:hover .consist__close {
+    display: none;
+  }
+
+  .tickets-cities__item .content__contains a.popup {
+    display: none;
+  }
+
+  .tickets-cities__item .consist:target {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  .tickets-cities__item {
+    width: calc(100% / 3 - 30px);
+  }
+
+  .tickets-cities__item .content__contains:nth-child(3n):hover .consist {
+    left: 0;
+    transform: translateX(-60%);
+  }
+}
+/*# sourceMappingURL=maps/tickets.css.map */
